@@ -20,7 +20,7 @@ class Solution {
             return 1;
         } else if (pos < coins.length) {
             if (coins[pos] <= amount) {
-                count = dfs(pos, amount + coins[pos]);
+                count = dfs(pos, amount - coins[pos]);
             }
 
             count += dfs(pos + 1, amount);
