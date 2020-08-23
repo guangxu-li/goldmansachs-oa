@@ -6,8 +6,14 @@
 
 // @lc code=star
 class Solution {
-    public int[][] highFive(int[][] items) {
-
+    public int[] runningSum(int[] nums) {
+        int[] rSums = new int[nums.length];
+        
+        for (int i = 0; i < nums.length; i++) {
+            rSums[i] = i == 0 ? nums[i] : rSums[i - 1] + nums[i];
+        }
+        
+        return rSums;
     }
 }
 // @lc code=end
